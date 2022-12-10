@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--============= SWIPER CSS ========================-->
+    <link rel="stylesheet" href=" {% static 'css/swiper-bundle.min.css' %} ">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="image/x-icon">
+
+    <title>Tic-Tech Digital</title>
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="nav-bar container">
+            <img src=" {% static 'img/logo_transparenta.jpg' %} " alt="" srcset=""> <a href="{% url 'accueil' %}" class="nav__logo">Tic-Tech Digital</a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav_item"><a href=" {% url 'apropos' %} " class="nav__link sub-menu"> <i class="bx bx-code-alt"></i> A Propos</a></li>
+                    <li class="nav_item"><a href=" {% url 'nosservice' %} " class="nav__link"><i class="bx bx-cart-alt new__icon"></i> Services</a></li>
+                    <li class="nav_item appel"><a href="tel: +224 625 81 98 43" class="nav__link"> <i class="bx bx-phone-incoming apel"></i> Appelez-nous maintenant</a></li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="bx bx-x"></i>
+                </div>
+            </div>
+            
+            <div class="nav__btns">
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="bx bx-grid-alt"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    {% block content %}{% endblock  %}
+
+
+    <footer class="footer">
+        <div class="copy">
+            <p><span class="footer__copy">&#169; Tic-Tech Digital; novembre 2022</span></p>
+            <ul class="reseaux">
+                <li class="reseaux__item"><a href="https://www.facebook.com/profile.php?id=100086224434078"><i class="bx bxl-facebook-square r__icon"></i></a></li>
+                <li class="reseaux__item"><a href="https://wa.me/message/BJVBG4DK47NUX1"><i class="bx bxl-whatsapp r__icon"></i></a></li>
+                <li class="reseaux__item"><a href=""><i class="bx bxl-twitter r__icon"></i></a></li>
+                <li class="reseaux__item"><a href="https://www.instagram.com/tictechdigitale?r=nametag"><i class="bx bxl-instagram r__icon"></i></a></li>
+                <li class="reseaux__item"><a href="tiktok.com/@tictechdigital"><i class="bx bxl-tiktok r__icon"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src=" {% static 'js/main.js' %} "></script>
+
+    <!--=============== SWIPER JS =========================-->
+    <script src=" {% static 'js/swiper-bundle.min.js' %} "></script>
+</body>
+</html>
